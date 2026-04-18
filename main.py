@@ -1,6 +1,7 @@
-def main():
-    print("Hello from infrastructure-lab!")
+from fastapi import FastAPI
 
+import routers.notes as notes
 
-if __name__ == "__main__":
-    main()
+app = FastAPI()
+
+app.include_router(notes.router)
